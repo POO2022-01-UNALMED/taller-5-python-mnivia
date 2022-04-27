@@ -7,31 +7,31 @@ class Pez(Animal):
     _bacalaos=0
     _salmones=0
 
-    def __init__(self,nombre,edad,habitat,genero,zona,colorEscamas,cantidaAletas):
-        super().__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self,nombre,edad,habitat,genero,colorEscamas,cantidaAletas):
+        super().__init__(nombre,edad,habitat,genero)
         self._colorEscamas=colorEscamas        
         self._cantidaAletas=cantidaAletas   
         Pez._listado.append(self)
 
-    def setcolorEscamas(self,colorEscamas):
+    def setColorEscamas(self,colorEscamas):
           self.colorEscamas=colorEscamas
 
-    def getcolorEscamas(self):
+    def getColorEscamas(self):
           return self._colorEscamas
 
-    def setcantidaAletas(self,cantidaAletas):
-          self.cantidaAletas=cantidaAletas
+    def setCantidadAletas(self,cantidaAletas):
+          self._cantidaAletas=cantidaAletas
 
-    def getcantidaAletas(self):
-          return self.cantidaAletas
+    def getCantidadAletas(self):
+          return self._cantidaAletas
 
-    def crearBacalao(nombre,edad,genero,zona):
+    def crearBacalao(nombre,edad,genero):
         Pez._bacalaos+=1
-        Pez._listado.append(Pez(nombre,edad,"oceano",genero,zona,"gris",6))                
+        Pez._listado.append(Pez(nombre,edad,"oceano",genero,"gris",6))                
 
-    def crearSalmon(nombre,edad,genero,zona):
+    def crearSalmon(nombre,edad,genero):
         Pez._salmones+=1
-        Pez._listado.append(Pez(nombre,edad,"oceano",genero,zona,"rojo",6))   
+        Pez._listado.append(Pez(nombre,edad,"oceano",genero,"rojo",6))   
 
     def cantidadPeces(self):
         return len(Pez._listado)

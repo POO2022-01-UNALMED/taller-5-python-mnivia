@@ -7,6 +7,17 @@ class Zoologico:
         self._ubicacion=ubicacion
         self._zonas=[]
         
+    def setNombre(self,nombre):
+          self._nombre=nombre
+
+    def getNombre(self):
+          return self._nombre
+
+    def setUbicacion(self,ubicacion):
+          self._ubicacion=ubicacion
+
+    def getUbicacion(self):
+          return self._ubicacion    
 
     def cantidadTotalAnimales(self):
         can=0

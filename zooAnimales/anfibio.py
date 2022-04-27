@@ -6,8 +6,8 @@ class Anfibio(Animal):
     _salamandras=0
     _ranas=0
 
-    def __init__(self,nombre,edad,habitat,genero,zona,colorPiel,venenoso):
-        super().__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self,nombre=None,edad=None,habitat=None,genero=None,colorPiel=None,venenoso=None):
+        super().__init__(nombre,edad,habitat,genero)
         self._colorPiel=colorPiel
         self._venenoso=venenoso
         Anfibio._listado.append(self)
@@ -15,23 +15,23 @@ class Anfibio(Animal):
     def setcolorPiel(self,colorPiel):
         self._colorPiel=colorPiel
 
-    def getcolorPiel(self):
+    def getColorPiel(self):
         return self._colorPiel
 
     def setvenenoso(self,venenoso):
         self._venenoso=venenoso
 
-    def getvenenoso(self):
+    def isVenenoso(self):
         return self._venenoso
 
 
-    def crearRana(nombre,edad,genero,zona):
+    def crearRana(nombre,edad,genero):
         Anfibio._ranas+=1
-        Anfibio._listado.append(Anfibio(nombre,edad,"selva",genero,zona,"rojo",True))                
+        Anfibio._listado.append(Anfibio(nombre,edad,"selva",genero,"rojo",True))                
 
-    def crearSalamandra(nombre,edad,genero,zona):
+    def crearSalamandra(nombre,edad,genero):
         Anfibio._salamandras+=1
-        Anfibio._listado.append(Anfibio(nombre,edad,"selva",genero,zona,"negro y amarillo",False))
+        Anfibio._listado.append(Anfibio(nombre,edad,"selva",genero,"negro y amarillo",False))
 
     def cantidadAnfibios(self):
         return len(Anfibio._listado)

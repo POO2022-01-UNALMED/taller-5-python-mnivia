@@ -7,8 +7,8 @@ class Mamifero(Animal):
     _caballos=0
     _leones=0
 
-    def __init__(self,nombre,edad,habitat,genero,zona,pelaje,patas):
-        super().__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self,nombre,edad,habitat,genero,pelaje,patas):
+        super().__init__(nombre,edad,habitat,genero)
         self._pelaje=pelaje
         self._patas=patas
         Mamifero._listado.append(self)
@@ -22,16 +22,16 @@ class Mamifero(Animal):
     def setPelaje(self,patas):
           self._patas=patas
 
-    def getPelaje(self):
+    def isPelaje(self):
           return self._patas
 
-    def crearCabalo(nombre,edad,genero,zona):
+    def crearCabalo(nombre,edad,genero):
         Mamifero._caballos+=1
-        Mamifero._listado.append(Mamifero(nombre,edad,"pradera",genero,zona,True,4))        
+        Mamifero._listado.append(Mamifero(nombre,edad,"pradera",genero,True,4))        
 
-    def crearLeon(nombre,edad,genero,zona):
+    def crearLeon(nombre,edad,genero):
         Mamifero._leones+=1
-        Mamifero._listado.append(Mamifero(nombre,edad,"selva",genero,zona,True,4))        
+        Mamifero._listado.append(Mamifero(nombre,edad,"selva",genero,True,4))        
               
     def cantidadMamiferos(self):
         return len(Mamifero._listado)     

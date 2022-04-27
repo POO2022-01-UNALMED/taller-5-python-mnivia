@@ -7,31 +7,31 @@ class Reptil(Animal):
     _serpientes=0
     _iguanas=0
 
-    def __init__(self,nombre,edad,habitat,genero,zona,colorEscamas,largoCola):
-        super().__init__(nombre,edad,habitat,genero,zona)
+    def __init__(self,nombre,edad,habitat,genero,colorEscamas,largoCola):
+        super().__init__(nombre,edad,habitat,genero)
         self._colorEscamas=colorEscamas        
         self._largoCola=largoCola   
         Reptil._listado.append(self)
 
-    def setcolorEscamas(self,colorEscamas):
+    def setColorEscamas(self,colorEscamas):
           self.colorEscamas=colorEscamas
 
-    def getcolorEscamas(self):
+    def getColorEscamas(self):
           return self._colorEscamas
 
-    def setlargoCola(self,largoCola):
+    def setLargoCola(self,largoCola):
           self.largoCola=largoCola
 
-    def getlargoCola(self):
+    def getLargoCola(self):
           return self._largoCola
 
-    def crearIguana(nombre,edad,genero,zona):
+    def crearIguana(nombre,edad,genero):
         Reptil._serpientes+=1
-        Reptil._listado.append(Reptil(nombre,edad,"humedal",genero,zona,"verde",3))                
+        Reptil._listado.append(Reptil(nombre,edad,"humedal",genero,"verde",3))                
 
-    def crearSerpiente(nombre,edad,genero,zona):
+    def crearSerpiente(nombre,edad,genero):
         Reptil._iguanas+=1
-        Reptil._listado.append(Reptil(nombre,edad,"jungla",genero,zona,"blanco",1))
+        Reptil._listado.append(Reptil(nombre,edad,"jungla",genero,"blanco",1))
 
     def cantidadReptiels(self):
         return len(Reptil._listado)                        
