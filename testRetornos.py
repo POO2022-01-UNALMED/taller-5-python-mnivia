@@ -31,4 +31,5 @@ def testToString():
     comp = "Mi nombre es paloma, tengo una edad de 5, habito en ciudad y mi genero es F"
     if ave1.toString() ==  comp:
         ok = True
-    assert(ok)
+    print(ok)
+

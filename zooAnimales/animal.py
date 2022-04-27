@@ -41,21 +41,22 @@ class Animal():
           self._zona=zona
 
     def getZona(self):
-          return self._zon
+          return self._zona
 
-    def totalPorTipo(self):
+    @staticmethod
+    def totalPorTipo():
         from zooAnimales.mamifero import Mamifero
         from zooAnimales.ave import Ave
         from zooAnimales.reptil import Reptil
         from zooAnimales.pez import Pez
         from zooAnimales.anfibio import Anfibio
-        return "Mamiferos: "+ Mamifero.cantidadMamiferos() +"\n"+ "Aves: "+ Ave.cantidadAves() +"\n" + "Reptiles: "+ Reptil.cantidadReptiels() +"\n" + "Peces: "+ Pez.cantidadPeces() +"\n" + "Anfibios: "+ Anfibio.cantidadAnfibios()   
+        return "Mamiferos : "+ str(Mamifero.cantidadMamiferos()) +"\n"+ "Aves : "+ str(Ave.cantidadAves()) +"\n" + "Reptiles : "+ str(Reptil.cantidadReptiels()) +"\n" + "Peces : "+ str(Pez.cantidadPeces()) +"\n" + "Anfibios : "+ str(Anfibio.cantidadAnfibios())   
 
     def toString(self) -> str:
         if (self.getZona()!=None):
-            return "Mi nombre es "+ self.getNombre()+", tengo una edad de "+self.getEdad()+ ", habito en "+ self.getHabitat()+ " y mi genero es "+ self.getGenero()+", la zona en la que me ubico es "+ self.zona.getNombre()+", en el" +self.zona.zoo.getNombre()    
+            return "Mi nombre es "+ self.getNombre()+", tengo una edad de "+ str(self.getEdad())+ ", habito en "+ self.getHabitat()+ " y mi genero es "+ self.getGenero()+", la zona en la que me ubico es "+ self.zona.getNombre()+", en el" +self.zona.zoo.getNombre()    
         else:
-            return "Mi nombre es "+ self.getNombre()+", tengo una edad de "+self.getEdad()+ ", habito en "+ self.getHabitat()+ " y mi genero es "+ self.getGenero()    
+            return "Mi nombre es "+ self.getNombre()+", tengo una edad de "+ str(self.getEdad())+ ", habito en "+ self.getHabitat()+ " y mi genero es "+ self.getGenero()    
 
         
 
