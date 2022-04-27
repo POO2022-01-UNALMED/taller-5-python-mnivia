@@ -51,7 +51,7 @@ class Animal():
         from zooAnimales.anfibio import Anfibio
         return "Mamiferos: "+ Mamifero.cantidadMamiferos() +"\n"+ "Aves: "+ Ave.cantidadAves() +"\n" + "Reptiles: "+ Reptil.cantidadReptiels() +"\n" + "Peces: "+ Pez.cantidadPeces() +"\n" + "Anfibios: "+ Anfibio.cantidadAnfibios()   
 
-    def __str__(self) -> str:
+    def toString(self) -> str:
         if (self.getZona()!=None):
             return "Mi nombre es "+ self.getNombre()+", tengo una edad de "+self.getEdad()+ ", habito en "+ self.getHabitat()+ " y mi genero es "+ self.getGenero()+", la zona en la que me ubico es "+ self.zona.getNombre()+", en el" +self.zona.zoo.getNombre()    
         else:
